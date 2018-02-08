@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script>
+function compute(form) {
+	
+	alert("hello2");
+	
+	var R = 0;
+	var I = 0;
+	var A = 0;
+	var S = 0;
+	var E = 0;
+	var C = 0; 
+	
+	var Q = "Q";
+
+	var counter = 1;
+	var radios = "";
+
+	for (counter = 1; counter < 31; counter++) {
+		//alert (Q+counter);
+		
+		
+		radios = document.getElementsByName(Q + counter);
+
+
+		for (i = 0, length = radios.length; i < length; i++) {
+			
+			if (radios[i].checked) {
+	  			//alert(radios[i].value);
+				
+				if (counter == 1 || counter == 7 || counter == 13 || counter == 19 || counter == 25) {
+					R = R + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 2 || counter == 8 || counter == 14 || counter == 20 || counter == 26) {
+					I = I + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 3 || counter == 9 || counter == 15 || counter == 21 || counter == 27) {
+					A = A + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 4 || counter == 10 || counter == 16 || counter == 22 || counter == 28) {
+					S = S + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 5 || counter == 11 || counter == 17 || counter == 23 || counter == 29) {
+					E = E + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 6 || counter == 12 || counter == 18 || counter == 24 || counter == 30) {
+					C = C + parseInt(radios[i].value);
+				} // end if
+				
+	  			break;
+	 		} // end if
+			
+		} // end inner for	
+
+		
+	} // end outer for
+	
+	alert("R is " + R);
+	alert("I is " + I);
+	alert("A is " + A);
+	alert("S is " + S);
+	alert("E is " + E);
+	alert("C is " + C);
+	
+	document.write('hello here');
+	
+	document.write(
+		'<table width="600" border="0" cellspacing="2" cellpadding="0">' +
+		'<tr>' +
+			'<td>' + R + '</td>' +
+			'<td>' + I + '</td>' +
+			'<td>' + A + '</td>' +
+			'<td>' + S + '</td>' +
+			'<td>' + E + '</td>' +
+			'<td>' + C + '</td>' +
+		'</tr>' +
+		'<tr>' +
+			'<td valign="bottom"><div style="display: block; background: red; width: 100px; height: ' + R*10 + 'px;"></div></td>' +
+			'<td valign="bottom"><div style="display: block; background: red; width: 100px; height: ' + I*10 + 'px;"></div></td>' +
+			'<td valign="bottom"><div style="display: block; background: red; width: 100px; height: ' + A*10 + 'px;"></div></td>' +
+			'<td valign="bottom"><div style="display: block; background: red; width: 100px; height: ' + S*10 + 'px;"></div></td>' +
+			'<td valign="bottom"><div style="display: block; background: red; width: 100px; height: ' + E*10 + 'px;"></div></td>' +
+			'<td valign="bottom"><div style="display: block; background: red; width: 100px; height: ' + C*10 + 'px;"></div></td>' +
+		'</tr>' +
+		'<tr>' +
+			'<td>R</td>' +
+			'<td>I</td>' +
+			'<td>A</td>' +
+			'<td>S</td>' +
+			'<td>E</td>' +
+			'<td>C</td>' +
+		'</tr>' +
+		'</table>');
+	
+	
+	
+} // end compute
+</script>
+
+</head>
+
+<body>
+
+<div id="demo"></div>
+
+<form id="RIASEC_Form" action="riasec.html" method="get" onSubmit="compute(this);">
+<p>1. Build kitchen cabinets.
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q1C1" value="0" name="Q1">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q1C2" value="1" name="Q1">Dislike</label></td>
+    <td><label><input type="radio" id="Q1C3" value="2" name="Q1">Unsure</label></td>
+    <td><label><input type="radio" id="Q1C4" value="3" name="Q1">Like</label></td>
+    <td><label><input type="radio" id="Q1C5" value="4" name="Q1">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>2. Develop a new medicine.
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q2C1" value="0" name="Q2">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q2C2" value="1" name="Q2">Dislike</label></td>
+    <td><label><input type="radio" id="Q2C3" value="2" name="Q2">Unsure</label></td>
+    <td><label><input type="radio" id="Q2C4" value="3" name="Q2">Like</label></td>
+    <td><label><input type="radio" id="Q2C5" value="4" name="Q2">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>3. Write books or plays.   
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q3C1" value="0" name="Q3">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q3C2" value="1" name="Q3">Dislike</label></td>
+    <td><label><input type="radio" id="Q3C3" value="2" name="Q3">Unsure</label></td>
+    <td><label><input type="radio" id="Q3C4" value="3" name="Q3">Like</label></td>
+    <td><label><input type="radio" id="Q3C5" value="4" name="Q3">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>4. Help people with personal or emotional problems.  
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q4C1" value="0" name="Q4">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q4C2" value="1" name="Q4">Dislike</label></td>
+    <td><label><input type="radio" id="Q4C3" value="2" name="Q4">Unsure</label></td>
+    <td><label><input type="radio" id="Q4C4" value="3" name="Q4">Like</label></td>
+    <td><label><input type="radio" id="Q4C5" value="4" name="Q4">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>5. Manage a department within a large company.       
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q5C1" value="0" name="Q5">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q5C2" value="1" name="Q5">Dislike</label></td>
+    <td><label><input type="radio" id="Q5C3" value="2" name="Q5">Unsure</label></td>
+    <td><label><input type="radio" id="Q5C4" value="3" name="Q5">Like</label></td>
+    <td><label><input type="radio" id="Q5C5" value="4" name="Q5">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>6. Install software across computers on large network.
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q6C1" value="0" name="Q6">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q6C2" value="1" name="Q6">Dislike</label></td>
+    <td><label><input type="radio" id="Q6C3" value="2" name="Q6">Unsure</label></td>
+    <td><label><input type="radio" id="Q6C4" value="3" name="Q6">Like</label></td>
+    <td><label><input type="radio" id="Q6C5" value="4" name="Q6">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>7. Repair household appliances.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q7C1" value="0" name="Q7">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q7C2" value="1" name="Q7">Dislike</label></td>
+    <td><label><input type="radio" id="Q7C3" value="2" name="Q7">Unsure</label></td>
+    <td><label><input type="radio" id="Q7C4" value="3" name="Q7">Like</label></td>
+    <td><label><input type="radio" id="Q7C5" value="4" name="Q7">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>8. Study ways to reduce water pollution.       
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q8C1" value="0" name="Q8">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q8C2" value="1" name="Q8">Dislike</label></td>
+    <td><label><input type="radio" id="Q8C3" value="2" name="Q8">Unsure</label></td>
+    <td><label><input type="radio" id="Q8C4" value="3" name="Q8">Like</label></td>
+    <td><label><input type="radio" id="Q8C5" value="4" name="Q8">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>9. Compose or arrange music.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q9C1" value="0" name="Q9">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q9C2" value="1" name="Q9">Dislike</label></td>
+    <td><label><input type="radio" id="Q9C3" value="2" name="Q9">Unsure</label></td>
+    <td><label><input type="radio" id="Q9C4" value="3" name="Q9">Like</label></td>
+    <td><label><input type="radio" id="Q9C5" value="4" name="Q9">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>10. Give career guidance to people.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q10C1" value="0" name="Q10">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q10C2" value="1" name="Q10">Dislike</label></td>
+    <td><label><input type="radio" id="Q10C3" value="2" name="Q10">Unsure</label></td>
+    <td><label><input type="radio" id="Q10C4" value="3" name="Q10">Like</label></td>
+    <td><label><input type="radio" id="Q10C5" value="4" name="Q10">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>11. Start your own business.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q11C1" value="0" name="Q11">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q11C2" value="1" name="Q11">Dislike</label></td>
+    <td><label><input type="radio" id="Q11C3" value="2" name="Q11">Unsure</label></td>
+    <td><label><input type="radio" id="Q11C4" value="3" name="Q11">Like</label></td>
+    <td><label><input type="radio" id="Q11C5" value="4" name="Q11">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>12. Operate a calculator.    
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q12C1" value="0" name="Q12">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q12C2" value="1" name="Q12">Dislike</label></td>
+    <td><label><input type="radio" id="Q12C3" value="2" name="Q12">Unsure</label></td>
+    <td><label><input type="radio" id="Q12C4" value="3" name="Q12">Like</label></td>
+    <td><label><input type="radio" id="Q12C5" value="4" name="Q12">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>13. Assemble electronic parts.     
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q13C1" value="0" name="Q13">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q13C2" value="1" name="Q13">Dislike</label></td>
+    <td><label><input type="radio" id="Q13C3" value="2" name="Q13">Unsure</label></td>
+    <td><label><input type="radio" id="Q13C4" value="3" name="Q13">Like</label></td>
+    <td><label><input type="radio" id="Q13C5" value="4" name="Q13">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>14. Conduct chemical experiments.     
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q14C1" value="0" name="Q14">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q14C2" value="1" name="Q14">Dislike</label></td>
+    <td><label><input type="radio" id="Q14C3" value="2" name="Q14">Unsure</label></td>
+    <td><label><input type="radio" id="Q14C4" value="3" name="Q14">Like</label></td>
+    <td><label><input type="radio" id="Q14C5" value="4" name="Q14">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>15. Create special effects for movies.    
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q15C1" value="0" name="Q15">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q15C2" value="1" name="Q15">Dislike</label></td>
+    <td><label><input type="radio" id="Q15C3" value="2" name="Q15">Unsure</label></td>
+    <td><label><input type="radio" id="Q15C4" value="3" name="Q15">Like</label></td>
+    <td><label><input type="radio" id="Q15C5" value="4" name="Q15">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>16. Perform rehabilitation therapy.       
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q16C1" value="0" name="Q16">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q16C2" value="1" name="Q16">Dislike</label></td>
+    <td><label><input type="radio" id="Q16C3" value="2" name="Q16">Unsure</label></td>
+    <td><label><input type="radio" id="Q16C4" value="3" name="Q16">Like</label></td>
+    <td><label><input type="radio" id="Q16C5" value="4" name="Q16">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>17. Negotiate business contracts.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q17C1" value="0" name="Q17">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q17C2" value="1" name="Q17">Dislike</label></td>
+    <td><label><input type="radio" id="Q17C3" value="2" name="Q17">Unsure</label></td>
+    <td><label><input type="radio" id="Q17C4" value="3" name="Q17">Like</label></td>
+    <td><label><input type="radio" id="Q17C5" value="4" name="Q17">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>18. Keep shipping and receiving records.    
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q18C1" value="0" name="Q18">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q18C2" value="1" name="Q18">Dislike</label></td>
+    <td><label><input type="radio" id="Q18C3" value="2" name="Q18">Unsure</label></td>
+    <td><label><input type="radio" id="Q18C4" value="3" name="Q18">Like</label></td>
+    <td><label><input type="radio" id="Q18C5" value="4" name="Q18">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>19. Drive a truck to deliver packages to offices and homes.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q19C1" value="0" name="Q19">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q19C2" value="1" name="Q19">Dislike</label></td>
+    <td><label><input type="radio" id="Q19C3" value="2" name="Q19">Unsure</label></td>
+    <td><label><input type="radio" id="Q19C4" value="3" name="Q19">Like</label></td>
+    <td><label><input type="radio" id="Q19C5" value="4" name="Q19">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>20. Examine blood samples using a microscope.       
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q20C1" value="0" name="Q20">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q20C2" value="1" name="Q20">Dislike</label></td>
+    <td><label><input type="radio" id="Q20C3" value="2" name="Q20">Unsure</label></td>
+    <td><label><input type="radio" id="Q20C4" value="3" name="Q20">Like</label></td>
+    <td><label><input type="radio" id="Q20C5" value="4" name="Q20">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>21. Paint sets for plays.     
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q21C1" value="0" name="Q21">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q21C2" value="1" name="Q21">Dislike</label></td>
+    <td><label><input type="radio" id="Q21C3" value="2" name="Q21">Unsure</label></td>
+    <td><label><input type="radio" id="Q21C4" value="3" name="Q21">Like</label></td>
+    <td><label><input type="radio" id="Q21C5" value="4" name="Q21">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>22. Do volunteer work at a non-profit organisation.       
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q22C1" value="0" name="Q22">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q22C2" value="1" name="Q22">Dislike</label></td>
+    <td><label><input type="radio" id="Q22C3" value="2" name="Q22">Unsure</label></td>
+    <td><label><input type="radio" id="Q22C4" value="3" name="Q22">Like</label></td>
+    <td><label><input type="radio" id="Q22C5" value="4" name="Q22">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>23. Market a new line of clothing.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q23C1" value="0" name="Q23">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q23C2" value="1" name="Q23">Dislike</label></td>
+    <td><label><input type="radio" id="Q23C3" value="2" name="Q23">Unsure</label></td>
+    <td><label><input type="radio" id="Q23C4" value="3" name="Q23">Like</label></td>
+    <td><label><input type="radio" id="Q23C5" value="4" name="Q23">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>24. Inventory supplies using a hand-held computer.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q24C1" value="0" name="Q24">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q24C2" value="1" name="Q24">Dislike</label></td>
+    <td><label><input type="radio" id="Q24C3" value="2" name="Q24">Unsure</label></td>
+    <td><label><input type="radio" id="Q24C4" value="3" name="Q24">Like</label></td>
+    <td><label><input type="radio" id="Q24C5" value="4" name="Q24">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>25. Test the quality of parts before shipment.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q25C1" value="0" name="Q25">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q25C2" value="1" name="Q25">Dislike</label></td>
+    <td><label><input type="radio" id="Q25C3" value="2" name="Q25">Unsure</label></td>
+    <td><label><input type="radio" id="Q25C4" value="3" name="Q25">Like</label></td>
+    <td><label><input type="radio" id="Q25C5" value="4" name="Q25">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>26. Develop a way to better predict the weather.    
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q26C1" value="0" name="Q26">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q26C2" value="1" name="Q26">Dislike</label></td>
+    <td><label><input type="radio" id="Q26C3" value="2" name="Q26">Unsure</label></td>
+    <td><label><input type="radio" id="Q26C4" value="3" name="Q26">Like</label></td>
+    <td><label><input type="radio" id="Q26C5" value="4" name="Q26">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>27. Write scripts for movies or television shows.      
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q27C1" value="0" name="Q27">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q27C2" value="1" name="Q27">Dislike</label></td>
+    <td><label><input type="radio" id="Q27C3" value="2" name="Q27">Unsure</label></td>
+    <td><label><input type="radio" id="Q27C4" value="3" name="Q27">Like</label></td>
+    <td><label><input type="radio" id="Q27C5" value="4" name="Q27">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>28. Teach a high-school class.     
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q28C1" value="0" name="Q28">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q28C2" value="1" name="Q28">Dislike</label></td>
+    <td><label><input type="radio" id="Q28C3" value="2" name="Q28">Unsure</label></td>
+    <td><label><input type="radio" id="Q28C4" value="3" name="Q28">Like</label></td>
+    <td><label><input type="radio" id="Q28C5" value="4" name="Q28">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>29. Sell merchandise at a department store.    
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q29C1" value="0" name="Q29">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q29C2" value="1" name="Q29">Dislike</label></td>
+    <td><label><input type="radio" id="Q29C3" value="2" name="Q29">Unsure</label></td>
+    <td><label><input type="radio" id="Q29C4" value="3" name="Q29">Like</label></td>
+    <td><label><input type="radio" id="Q29C5" value="4" name="Q29">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<p>30. Stamp, sort and distribute mail for an organisation.     
+<table cellpadding="0" cellspacing="0" width="700" border="1">
+<tr>
+	<td><label><input type="radio" id="Q30C1" value="0" name="Q30">Strongly Like</label></td>
+    <td><label><input type="radio" id="Q30C2" value="1" name="Q30">Dislike</label></td>
+    <td><label><input type="radio" id="Q30C3" value="2" name="Q30">Unsure</label></td>
+    <td><label><input type="radio" id="Q30C4" value="3" name="Q30">Like</label></td>
+    <td><label><input type="radio" id="Q30C5" value="4" name="Q30">Strongly Like</label></td>
+</tr>
+</table>
+</p>
+
+<input type="submit">
+</form>
+
+</body>
+</html>
