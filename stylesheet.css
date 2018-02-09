@@ -68,6 +68,7 @@ html, body {background: #EAEAEA; font-family: Arial; font-size: 17px; line-heigh
 
 form {padding: 20px; width: 660px;}
 .options {width: 620px; margin-top: 10px; margin-bottom: 40px; margin-left: 15px;}
+.options-small {padding: 20px; width: 660px; margin-top: 10px; margin-left: 15px; font-size: 12px;}
 .options td {width: 120px; text-align: center;}
 
 .instructions {padding: 20px; width: 660px;}
@@ -75,5 +76,10 @@ form {padding: 20px; width: 660px;}
 hr {width: 75%;}
 
 img.icon {width: 60px;}
+img.icon-small {width: 30px;}
+img.icon-medium {width: 70px;}
+
+.icon-small-desc {height: 20px; vertical-align: middle;}
+.note {font-size: 11px; width: 100%; text-align: center; margin-top: 20px; padding-bottom: 20px; margin-bottom: 20px; display: block;}
 
 .submit {width: 100%; text-align: center;}
