@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom CSS */
+html, body {background: #EAEAEA; font-family: Arial; font-size: 17px; line-height: 20px;}
+
+#container {width: 700px; margin: 0px auto; background: white;}
+
+.pageheader {margin-top: 20px; margin-bottom: 20px; padding-top: 20px; text-align: center; font-family: Arial Black;}
+.explanation {width: 600px; margin: 0px auto; margin-top: 20px; margin-bottom: 20px;}
+.explanation .terms {vertical-align: middle; text-align: center; width: 100px;}
+.explanation .description {width: 420px;}
+.explanation td {padding: 20px;}
+
+.barchart {width: 700px; text-align: center;}
+.barchart table {border-left: 1px solid black; border-bottom: 1px solid black; text-align: center; margin: 0px auto;}
+.barchart td {vertical-align: bottom; text-align: center;}
+.barchart .bar {display: block; background: red; width: 50px; text-align:center; margin: 0px auto;}
+
+form {padding: 20px; width: 660px;}
+.options {width: 620px; margin-top: 10px; margin-bottom: 40px; margin-left: 15px;}
+.options td {width: 120px; text-align: center;}
+
+.instructions {padding: 20px; width: 660px;}
+
+hr {width: 75%;}
+
+img.icon {width: 60px;}
+
+.submit {width: 100%; text-align: center;}
