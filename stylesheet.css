@@ -59,7 +59,7 @@ html, body {background: #EAEAEA; font-family: Arial; font-size: 17px; line-heigh
 .explanation {width: 600px; margin: 0px auto; margin-top: 20px; margin-bottom: 20px;}
 .explanation .terms {vertical-align: middle; text-align: center; width: 100px;}
 .explanation .description {width: 420px;}
-.explanation td {padding: 20px;}
+.explanation td {padding: 18px;}
 
 .barchart {width: 700px; text-align: center;}
 .barchart table {border-left: 1px solid black; border-bottom: 1px solid black; text-align: center; margin: 0px auto;}
