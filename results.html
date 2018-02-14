@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Personal Interest Profiling</title>
+
+<style type="text/css">
+</style>
+
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+
+<script type="text/javascript">
+function compute(form) {
+	
+	alert("here");
+	
+	var R = 0;
+	var I = 0;
+	var A = 0;
+	var S = 0;
+	var E = 0;
+	var C = 0; 
+	
+	var Q = "Q";
+
+	var counter = 1;
+	var radios = "";
+
+	for (counter = 1; counter < 31; counter++) {
+		
+		radios = document.getElementsByName(Q + counter);
+
+		for (i = 0, length = radios.length; i < length; i++) {
+			
+			if (radios[i].checked) {
+	  			//alert(radios[i].value);
+				
+				if (counter == 1 || counter == 7 || counter == 13 || counter == 19 || counter == 25) {
+					R = R + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 2 || counter == 8 || counter == 14 || counter == 20 || counter == 26) {
+					I = I + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 3 || counter == 9 || counter == 15 || counter == 21 || counter == 27) {
+					A = A + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 4 || counter == 10 || counter == 16 || counter == 22 || counter == 28) {
+					S = S + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 5 || counter == 11 || counter == 17 || counter == 23 || counter == 29) {
+					E = E + parseInt(radios[i].value);
+				} // end if
+				
+				if (counter == 6 || counter == 12 || counter == 18 || counter == 24 || counter == 30) {
+					C = C + parseInt(radios[i].value);
+				} // end if
+				
+	  			break;
+	 		} // end if
+			
+		} // end inner for	
+		
+	} // end outer for
+	
+	/*
+	alert("R is " + R);
+	alert("I is " + I);
+	alert("A is " + A);
+	alert("S is " + S);
+	alert("E is " + E);
+	alert("C is " + C);
+	*/
+
+	document.getElementById("resultsDiv").innerHTML = '' + 
+	
+	'<link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen">' + 
+	
+	'<div id="container">' + 
+	
+	'<div class="pageheader">RIASEC Codes</div>' +
+
+		'<div class="barchart">' +
+		'<table width="600" border="0" cellspacing="2" cellpadding="0">' +
+		'<tr>' +
+			'<td colspan="7" height="20"></td>' + 
+		'</tr>' +
+		'<tr>' +
+			'<td><div style="display: block; background: white; width: 10px; height: 10px;"></div></td>' +
+			'<td>' + R + '%<div class="bar" style="height: ' + R*10 + 'px;"></div></td>' +
+			'<td>' + I + '%<div class="bar" style="height: ' + I*10 + 'px;"</div></td>' +
+			'<td>' + A + '%<div class="bar" style="height: ' + A*10 + 'px;"></div></td>' +
+			'<td>' + S + '%<div class="bar" style="height: ' + S*10 + 'px;"></div></td>' + 
+			'<td>' + E + '%<div class="bar" style="height: ' + E*10 + 'px;"></div></td>' + 
+			'<td>' + C + '%<div class="bar" style="height: ' + C*10 + 'px;"></div></td>' + 
+		'</tr>' +
+		'</table>' +
+        
+ 		'<table width="600" border="0" cellspacing="2" cellpadding="0">' + 
+		'<tr>' +
+			'<td width="10"></td>' + 
+			'<td width="50">R</td>' +
+			'<td width="50">I</td>' + 
+			'<td width="50">A</td>' + 
+			'<td width="50">S</td>' + 
+			'<td width="50">E</td>' + 
+			'<td width="50">C</td>' + 
+		'</tr>' + 
+		'</table>' +
+		'</div> <!-- end barchart -->' +
+
+
+		'<div class="explanation">' +
+		'<table width="600" border="0" cellspacing="0" cellpadding="0">' +
+		'<tr>' +
+			'<td class="terms">Realistic</td>' +
+			'<td class="description">People with Realistic interests like work that includes practical, hands-on problems and answers. Often people with Realistic interests do not like careers that involve paperwork or working closely with others.</td>' + 
+		'</tr>' +
+        
+        '<tr>' + 
+			'<td class="terms">Investigative</td>' +
+			'<td class="description">People with Investigative interests like work that has to do with ideas and thinking rather than physical activity or leading people.</td>' +
+		'</tr>' +
+        
+        '<tr>' +
+			'<td class="terms">Artistic</td>' +
+			'<td class="description">People with Artistic interests like work that deals with the artistic side of things, such as acting, music, art, and design.</td>' +
+		'</tr>' +
+        
+        '<tr> ' +
+			'<td class="terms">Social</td>' + 
+			'<td class="description">People with Social interests like working with others to help them learn and grow. They like working with people more than working with objects, machines, or information.</td>' + 
+		'</tr>' +
+        
+        '<tr>' + 
+			'<td class="terms">Enterprising</td>' + 
+			'<td class="description">People with Enterprising interests like work that has to do with starting up and carrying out business projects. These people like taking action rather than thinking about things.</td>' + 
+		'</tr>' +
+        
+        '<tr>' + 
+			'<td class="terms">Conventional</td>' + 
+			'<td class="description">People with Conventional interests like work that follows set procedures and routines. They prefer working with information and paying attention to details rather than working with ideas.</td>' + 
+		'</tr>' +
+		'</table>' +
+		'</div> <!-- end explanation -->' +
+		
+		'</div> <!-- end container -->' + 
+		
+		'';
+	
+	return document.write(document.getElementById("resultsDiv").innerHTML);
+	
+} // end compute
+</script>
+</head>
+
+<body onload="compute(RIASEC_Form);">
+<div id="container">
+
+<div id="resultsDiv"></div>
+
+</div> <!-- end container -->
+</body>
+</html>
