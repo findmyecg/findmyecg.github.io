@@ -10,9 +10,18 @@
 <link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen">
 
 <script type="text/javascript">
-function compute(form) {
+
+window.onload = function() {
+	alert("in onload on results.html");
 	
-	alert("here");
+	compute();
+	
+	alert("finish onload on results.html");
+};
+
+function compute() {
+	
+	alert("in compute on results.html");
 	
 	var R = 0;
 	var I = 0;
@@ -21,59 +30,22 @@ function compute(form) {
 	var E = 0;
 	var C = 0; 
 	
-	var Q = "Q";
-
-	var counter = 1;
-	var radios = "";
-
-	for (counter = 1; counter < 31; counter++) {
-		
-		radios = document.getElementsByName(Q + counter);
-
-		for (i = 0, length = radios.length; i < length; i++) {
-			
-			if (radios[i].checked) {
-	  			//alert(radios[i].value);
-				
-				if (counter == 1 || counter == 7 || counter == 13 || counter == 19 || counter == 25) {
-					R = R + parseInt(radios[i].value);
-				} // end if
-				
-				if (counter == 2 || counter == 8 || counter == 14 || counter == 20 || counter == 26) {
-					I = I + parseInt(radios[i].value);
-				} // end if
-				
-				if (counter == 3 || counter == 9 || counter == 15 || counter == 21 || counter == 27) {
-					A = A + parseInt(radios[i].value);
-				} // end if
-				
-				if (counter == 4 || counter == 10 || counter == 16 || counter == 22 || counter == 28) {
-					S = S + parseInt(radios[i].value);
-				} // end if
-				
-				if (counter == 5 || counter == 11 || counter == 17 || counter == 23 || counter == 29) {
-					E = E + parseInt(radios[i].value);
-				} // end if
-				
-				if (counter == 6 || counter == 12 || counter == 18 || counter == 24 || counter == 30) {
-					C = C + parseInt(radios[i].value);
-				} // end if
-				
-	  			break;
-	 		} // end if
-			
-		} // end inner for	
-		
-	} // end outer for
+	R = localStorage.getItem("R");
+	I = localStorage.getItem("I");
+	A = localStorage.getItem("A");
+	S = localStorage.getItem("S");
+	E = localStorage.getItem("E");
+	C = localStorage.getItem("C");
 	
-	/*
-	alert("R is " + R);
-	alert("I is " + I);
-	alert("A is " + A);
-	alert("S is " + S);
-	alert("E is " + E);
-	alert("C is " + C);
-	*/
+	
+	
+	alert("R (results.html) is " + R);
+	alert("I (results.html) is " + I);
+	alert("A (results.html) is " + A);
+	alert("S (results.html) is " + S);
+	alert("E (results.html) is " + E);
+	alert("C (results.html) is " + C);
+	
 
 	document.getElementById("resultsDiv").innerHTML = '' + 
 	
@@ -151,13 +123,14 @@ function compute(form) {
 		
 		'';
 	
-	return document.write(document.getElementById("resultsDiv").innerHTML);
+	document.write(document.getElementById("resultsDiv").innerHTML);
 	
 } // end compute
+
 </script>
 </head>
 
-<body onload="compute(RIASEC_Form);">
+<body>
 <div id="container">
 
 <div id="resultsDiv"></div>
