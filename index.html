@@ -151,6 +151,10 @@ function compute(form) {
 	
 	return document.write(document.getElementById("resultsDiv").innerHTML);
 } // end compute
+
+function submitForm() {
+    document.getElementById("RIASEC_Form").submit();
+}
 </script>
 </head>
 
@@ -187,7 +191,7 @@ Discover the best jobs for you using the system of Holland career codes!
 <hr />
 
 
-<form id="RIASEC_Form" name="RIASEC_Form" action="results.html" method="get" onSubmit="return compute(this);">
+<form id="RIASEC_Form" name="RIASEC_Form" action="results.html" method="get" onSubmit="return submitForm(this);">
 
 <p>1. Build kitchen cabinets.
 <table class="options">
